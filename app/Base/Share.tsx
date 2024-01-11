@@ -52,27 +52,27 @@ export default function Share() {
             className="share__menu"
           >
             <FacebookShareButton
-              url={"https://cary.arealglam.com"}
+              url={"https://caryarealglam.vercel.app"}
               title="Friend's Advice for Being the Sexiest in Town"
             >
               <span>{facebookIcon} </span> facebook
             </FacebookShareButton>
             <PinterestShareButton
-              url={"https://cary.arealglam.com"}
-              media={"https://cary.arealglam.com/images/logo.png"}
+              url={"https://caryarealglam.vercel.app"}
+              media={"https://caryarealglam.vercel.app/images/logo.png"}
               title="Friend's Advice for Being the Sexiest in Town"
             >
               <span>{pinterestIcon} </span> Pinterest
             </PinterestShareButton>
             <TwitterShareButton
               title="Friend's Advice for Being the Sexiest in Town"
-              url={"https://cary.arealglam.com"}
+              url={"https://caryarealglam.vercel.app"}
             >
               <span>{twitterIcon}</span>
               twitter
             </TwitterShareButton>
             <EmailShareButton
-              url={"https://cary.arealglam.com"}
+              url={"https://caryarealglam.vercel.app"}
               subject="Friend's Advice for Being the Sexiest in Town"
             >
               <span>{mailIcon}</span>
@@ -81,7 +81,7 @@ export default function Share() {
             <button
               type="button"
               onClick={() => {
-                navigator.clipboard.writeText("https://cary.arealglam.com");
+                navigator.clipboard.writeText("https://caryarealglam.vercel.app");
                 setActive(false);
               }}
             >
