@@ -395,6 +395,7 @@ p.ex {
       -ms-flex-align: center;
           align-items: center;
   text-transform: capitalize;
+  background: transparent;
 }
 .share__menu a:hover,
 .share__menu button:hover {
