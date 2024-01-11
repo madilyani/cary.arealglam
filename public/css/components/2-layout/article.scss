@@ -1,0 +1,152 @@
+.article {
+  padding: 45px 0 170px;
+  &__inner {
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 35px;
+    }
+  }
+  &Item {
+    padding: 22px 22px 46px 22px;
+    background-color: $white;
+    border: 1px solid #e7e6ea;
+    box-shadow: 0px 5px 50px rgba(148, 142, 176, 0.12);
+    border-radius: 34px;
+    &__image {
+      padding-bottom: 98%;
+      position: relative;
+      border-radius: 25px;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+    &__rating {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      width: 98px;
+      height: 98px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 30px;
+      line-height: 100%;
+      font-weight: 700;
+      color: $black;
+      font-family: $merri;
+      background-color: $white;
+      border-radius: 50%;
+    }
+    &__content {
+      padding: 36px 12px 0 12px;
+      h2 {
+        max-width: 885px;
+        margin-bottom: 22px;
+      }
+      ul {
+        li {
+          font-size: 18px;
+          line-height: 26px;
+          margin-bottom: 22px;
+          position: relative;
+          color: #414141;
+          padding-left: 28px;
+          box-sizing: border-box;
+          &::before {
+            position: absolute;
+            top: 11px;
+            left: 8px;
+            width: 7px;
+            height: 7px;
+            background-color: #414141;
+            content: "";
+            border-radius: 50%;
+          }
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+// 930px
+@mixin article-md-lg {
+  .article {
+    padding: 35px 0 140px;
+    &__inner {
+      h1 {
+        font-size: 23px;
+      }
+    }
+    &Item {
+      padding: 15px 15px 30px 15px;
+      border-radius: 25px;
+      &__image {
+        border-radius: 18px;
+      }
+      &__content {
+        padding: 20px 8px 0 8px;
+      }
+      &__rating {
+        width: 75px;
+        height: 75px;
+        font-size: 25px;
+        bottom: 20px;
+        left: 20px;
+      }
+    }
+  }
+}
+// 540px
+@mixin article-xsm-sm {
+  .article {
+    padding: 15px 0 140px;
+    &Item {
+      width: calc(100% + 40px);
+      margin: 0 -20px;
+      padding: 0;
+      border-radius: unset;
+      border: unset;
+      box-shadow: unset;
+      &__image {
+        padding-bottom: 138%;
+        border-radius: unset;
+      }
+      &__rating {
+        bottom: 30px;
+        left: 20px;
+        width: 60px;
+        height: 60px;
+        font-size: 16px;
+      }
+      &__content {
+        padding: 22px 20px 0 20px;
+        ul {
+          li {
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 500;
+            padding-left: 22px;
+            &::before {
+              width: 5px;
+              height: 5px;
+              left: 7px;
+              top: 11px;
+            }
+          }
+        }
+        h2 {
+          margin-bottom: 13px;
+        }
+      }
+    }
+  }
+}

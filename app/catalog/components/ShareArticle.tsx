@@ -1,0 +1,111 @@
+"use client";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import {
+  copyIcon,
+  facebookIcon,
+  mailIcon,
+  pinterestIcon,
+  shareIcon,
+  twitterIcon,
+} from "@/app/Base/SVG";
+import Link from "next/link";
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  PinterestShareButton,
+  TwitterShareButton,
+} from "react-share";
+
+export default function ShareArticle({
+  imageUrl,
+  wrapper,
+  id,
+  name,
+  articleId,
+}: {
+  wrapper: any;
+  id: any;
+  name: string;
+  articleId: any;
+  imageUrl: any;
+}) {
+  const [currentUrl, setCurrentUrl] = useState<string>("");
+
+  useEffect(() => {
+    setCurrentUrl(window.location.href);
+  }, []);
+  const [active, setActive] = useState(false);
+  useEffect(() => {
+    const windowClick = (e: MouseEvent) => {
+      if (!wrapper.current.contains(e.target)) setActive(false);
+    };
+
+    if (active) window.addEventListener("click", windowClick);
+    else window.removeEventListener("click", windowClick);
+
+    return () => window.removeEventListener("click", windowClick);
+  }, [active]);
+  return (
+    <div className="share" ref={wrapper}>
+      <div
+        className={"catalogItem__share " + (active ? "active" : "")}
+        onClick={() => {
+          setActive(!active);
+        }}
+      >
+        {shareIcon}
+      </div>
+      <AnimatePresence>
+        {active === true && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
+            exit={{ opacity: 0 }}
+            className="share__menu"
+          >
+            <FacebookShareButton
+              title={name}
+              url={`https://cary.arealglam.com/article/${id}/${articleId}`}
+            >
+              <span>{facebookIcon} </span> facebook
+            </FacebookShareButton>
+            <PinterestShareButton
+              url={`https://cary.arealglam.com/article/${id}/${articleId}`}
+              media={`https://cary.arealglam.com${imageUrl}`}
+            >
+              <span>{pinterestIcon} </span> Pinterest
+            </PinterestShareButton>
+            <TwitterShareButton
+              title={name}
+              url={`https://cary.arealglam.com/article/${id}/${articleId}`}
+            >
+              <span>{twitterIcon}</span>
+              twitter
+            </TwitterShareButton>
+            <EmailShareButton
+              url={`https://cary.arealglam.com/article/${id}/${articleId}`}
+              subject={name}
+            >
+              <span>{mailIcon}</span>
+              email
+            </EmailShareButton>
+            <button
+              type="button"
+              onClick={() => {
+                navigator.clipboard.writeText(
+                  `https://cary.arealglam.com/article/${id}/${articleId}`
+                );
+                setActive(false);
+              }}
+            >
+              <span>{copyIcon}</span>
+              copy link
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
