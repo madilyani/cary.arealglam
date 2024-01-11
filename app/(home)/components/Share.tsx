@@ -66,25 +66,25 @@ export default function Share({
           >
             <FacebookShareButton
               title={name}
-              url={`https://caryarealglam.vercel.app/catalog/${id}`}
+              url={`https://cary.arealglam.com/catalog/${id}`}
             >
               <span>{facebookIcon} </span> facebook
             </FacebookShareButton>
             <PinterestShareButton
-              url={`https://caryarealglam.vercel.app/catalog/${id}`}
-              media={`https://caryarealglam.vercel.app${imageUrl}`}
+              url={`https://cary.arealglam.com/catalog/${id}`}
+              media={`https://cary.arealglam.com${imageUrl}`}
             >
               <span>{pinterestIcon} </span> Pinterest
             </PinterestShareButton>
             <TwitterShareButton
               title={name}
-              url={`https://caryarealglam.vercel.app/catalog/${id}`}
+              url={`https://cary.arealglam.com/catalog/${id}`}
             >
               <span>{twitterIcon}</span>
               twitter
             </TwitterShareButton>
             <EmailShareButton
-              url={`https://caryarealglam.vercel.app/catalog/${id}`}
+              url={`https://cary.arealglam.com/catalog/${id}`}
               subject={name}
             >
               <span>{mailIcon}</span>
@@ -94,7 +94,7 @@ export default function Share({
               type="button"
               onClick={() => {
                 navigator.clipboard.writeText(
-                  `https://caryarealglam.vercel.app/catalog/${id}`
+                  `https://cary.arealglam.com/catalog/${id}`
                 );
                 setActive(false);
               }}

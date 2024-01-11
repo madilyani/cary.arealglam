@@ -67,25 +67,25 @@ export default function ShareArticle({
           >
             <FacebookShareButton
               title={name}
-              url={`https://caryarealglam.vercel.app/article/${id}/${articleId}`}
+              url={`https://cary.arealglam.com/article/${id}/${articleId}`}
             >
               <span>{facebookIcon} </span> facebook
             </FacebookShareButton>
             <PinterestShareButton
-              url={`https://caryarealglam.vercel.app/article/${id}/${articleId}`}
-              media={`https://caryarealglam.vercel.app${imageUrl}`}
+              url={`https://cary.arealglam.com/article/${id}/${articleId}`}
+              media={`https://cary.arealglam.com${imageUrl}`}
             >
               <span>{pinterestIcon} </span> Pinterest
             </PinterestShareButton>
             <TwitterShareButton
               title={name}
-              url={`https://caryarealglam.vercel.app/article/${id}/${articleId}`}
+              url={`https://cary.arealglam.com/article/${id}/${articleId}`}
             >
               <span>{twitterIcon}</span>
               twitter
             </TwitterShareButton>
             <EmailShareButton
-              url={`https://caryarealglam.vercel.app/article/${id}/${articleId}`}
+              url={`https://cary.arealglam.com/article/${id}/${articleId}`}
               subject={name}
             >
               <span>{mailIcon}</span>
@@ -95,7 +95,7 @@ export default function ShareArticle({
               type="button"
               onClick={() => {
                 navigator.clipboard.writeText(
-                  `https://caryarealglam.vercel.app/article/${id}/${articleId}`
+                  `https://cary.arealglam.com/article/${id}/${articleId}`
                 );
                 setActive(false);
               }}

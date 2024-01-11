@@ -16,7 +16,7 @@ export const metadata = {
       "Cary is a platform for discovering the best new products, brands, and influencers in fashion and beauty.",
     images: [
       {
-        url: "https://caryarealglam.vercel.app/images/logo.png",
+        url: "https://cary.arealglam.com/images/logo.png",
         width: 800,
         height: 600,
         alt: "Cary",
@@ -29,7 +29,7 @@ export const metadata = {
     title: "Cary",
     description:
       "Cary is a platform for discovering the best new products, brands, and influencers in fashion and beauty.",
-    image: "https://caryarealglam.vercel.app/images/logo.png",
+    image: "https://cary.arealglam.com/images/logo.png",
   },
 };
 export default function RootLayout({

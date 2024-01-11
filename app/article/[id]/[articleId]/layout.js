@@ -552,13 +552,13 @@ export async function generateMetadata({ params }) {
       description: "This is description",
       images: [
         {
-          url: `https://caryarealglam.vercel.app${article?.image}`,
+          url: `https://cary.arealglam.com${article?.image}`,
           width: 800,
           height: 600,
           alt: data?.name,
         },
         {
-          url: `https://caryarealglam.vercel.app${article?.image}`,
+          url: `https://cary.arealglam.com${article?.image}`,
           width: 800,
           height: 600,
           alt: data?.name,
@@ -570,7 +570,7 @@ export async function generateMetadata({ params }) {
       site: "@NicoTery39168",
       title: data?.name.toString(),
       description: "This is description".toString(),
-      image: `https://caryarealglam.vercel.app${article?.image}`,
+      image: `https://cary.arealglam.com${article?.image}`,
     },
   };
 
