@@ -47,7 +47,7 @@ export default function ShareArticle({
   return (
     <div className="share" ref={wrapper}>
       <div
-        className={"catalogItem__share " + (active ? "active" : "")}
+        className={"share__btn " + (active ? "active" : "")}
         onClick={() => {
           setActive(!active);
         }}

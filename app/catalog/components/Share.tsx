@@ -25,7 +25,6 @@ export default function Share({
   id: any;
   name: string;
   imageUrl: any;
-
 }) {
   const wrapper = useRef<any>(null);
 
@@ -49,7 +48,7 @@ export default function Share({
   return (
     <div className="share" ref={wrapper}>
       <div
-        className={"createItem__head-btn " + (active ? "active" : "")}
+        className={"share__btn " + (active ? "active" : "")}
         onClick={() => {
           setActive(!active);
         }}
